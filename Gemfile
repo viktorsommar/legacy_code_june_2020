@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.4.3'
+ruby '2.6.3'
 
 gem 'rails', '5.1.5'
 
@@ -20,6 +20,7 @@ group :development do
   gem 'pry-byebug'
   gem 'spring'
   gem 'web-console', '~> 2.0'
+  gem 'rspec-rails'
 end
 
 group :production do
