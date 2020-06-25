@@ -9,9 +9,10 @@ feature 'User can sign up' do
       fill_in 'Email', with: 'example@example.com'
       fill_in 'Password', with: 'password123'
       fill_in 'Password confirmation', with: 'password123'
+      click_on 'Create'
     end
 
-    it 'shows a sign up button' do
+    it 'shows a successful sign up' do
       expect(page).to have_content 'Welcome! You have signed up successfully.'
     end 
   end
