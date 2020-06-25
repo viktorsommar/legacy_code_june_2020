@@ -25,9 +25,4 @@ end
 
 end
 
-# it 'redirect user to ladning page' do
-#     expect(page).to have_content 'Signed in successfully.'
-# end
-
-# end
 
