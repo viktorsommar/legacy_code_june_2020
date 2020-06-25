@@ -21,6 +21,10 @@ group :development do
   gem 'spring'
   gem 'web-console', '~> 2.0'
   gem 'rspec-rails'
+<<<<<<< HEAD
+=======
+  gem 'capybara'
+>>>>>>> d3d15580843b410b3595c83957606a1c414e7c9f
 end
 
 group :production do

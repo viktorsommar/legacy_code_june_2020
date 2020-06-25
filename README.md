@@ -1,5 +1,6 @@
 ## CA Mailboxer 2018
 
+<<<<<<< HEAD
 Code base for week 5 challenge - Working with legacy code
 
 
@@ -41,3 +42,6 @@ So that I can remove unwanted messages.
 As a message sender
 I want to store my recipients
 So that I do not need to re-enter their information when I want to message them.
+=======
+Code base for week 5 challenge - Working with legacy code...
+>>>>>>> d3d15580843b410b3595c83957606a1c414e7c9f
