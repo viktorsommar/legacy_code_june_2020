@@ -1,5 +1,5 @@
 FactoryBot.define do
-    factory :recipients do
-        name { 'Name'}
-    end
+  factory :recipient do
+    title { "MyString" }
+  end
 end
