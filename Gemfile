@@ -20,11 +20,13 @@ group :development do
   gem 'pry-byebug'
   gem 'spring'
   gem 'web-console', '~> 2.0'
+end
+
+group :development, :test do
   gem 'rspec-rails'
-<<<<<<< HEAD
-=======
+  gem 'shoulda-matchers'
   gem 'capybara'
->>>>>>> d3d15580843b410b3595c83957606a1c414e7c9f
+  gem 'factory_bot_rails'
 end
 
 group :production do
