@@ -21,4 +21,8 @@ it 'fills in email and password' do
     click_on "Log in"
 end
 
+it 'redirect user to ladning page' do
+    expect(page).to have_content 'Signed in successfully.'
+end
+
 end
