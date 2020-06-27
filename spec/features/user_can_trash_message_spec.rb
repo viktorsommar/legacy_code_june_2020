@@ -1,7 +1,7 @@
 require "rails_helper"
 
 feature "User can trash and untrash messages" do
-    context "Sender can send message and receiver receives it" do
+    context "Sender can send message and receiver trashes it" do
     let(:user1) { create(:user, name: 'Alex', email: 'sender@mail.com') }
     let(:user2) { create(:user, name: 'Sima', email: 'receiver@mail.com') }
     before do
