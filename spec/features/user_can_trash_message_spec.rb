@@ -1,14 +1,21 @@
 require "rails_helper"
 
-feature "User can trash messages" do
+feature "User can trash and untrash messages" do
+    let(:user) { FactoryBot.create(:user) }
+    let(:sender) { FactoryBot.create(:user, name: 'Alex', email: 'sender@mail.com') }
+    let(:receiver) { FactoryBot.create(:user, name: 'Sima', email: 'receiver@mail.com') }
     before do
-        create(:user, email: 'user@mail.com', password: '12345678', name: 'Alex')
-        create(:user, email: 'user2@mail.com', password: '12345678', name: 'Sima')
-        create(:conversation, recipient: 'Sima', subject: 'Hello', body: 'Hello there Alex')
-        visit mailbox_inbox_path
+        login_as(user, scope: :user)
+        sender.send_message(receiver, 'Writing some text for test', 'Subject' )
+        visit root_path
+        click_on "Inbox"
     end
 
-    it 'User can see message in inbox' do
-        expect(page).to have_content 'View'
+    context "User can trash message" do
+        
+        it 'should have 1 new message in the inbox' do
+          count = receiver.mailbox.inbox.count
+          expect(count).to eq 1
+        end
     end
 end
